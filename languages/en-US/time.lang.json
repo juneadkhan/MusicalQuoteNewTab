@@ -1,0 +1,11 @@
+{
+	"morning" : "morning",
+	"afternoon" : "afternoon",
+	"day" : "day",
+	"evening" : "evening",
+	"night" : "night",
+	"good" : "good",
+	"today" : "today",
+	"is" : "is",
+	"greeting" : "Good {daystate} {name}, today is {date}"
+}
