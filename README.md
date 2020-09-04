@@ -1,3 +1,4 @@
+Link to the original repostiory - https://github.com/jakke-korpelainen/newtab-angular
 DEMO: http://jakke-korpelainen.github.io/newtab-angular/#/
 
 #Briefly
