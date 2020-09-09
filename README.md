@@ -1,6 +1,3 @@
-1. Perhaps rename the repository to JuneadKhan.Github.io
-2. go to http://juneadkhan.github.io/
-
 Link to the original repostiory - https://github.com/jakke-korpelainen/newtab-angular
 
 DEMO: http://jakke-korpelainen.github.io/newtab-angular/#/
