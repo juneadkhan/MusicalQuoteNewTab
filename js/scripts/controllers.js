@@ -48,11 +48,13 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 	        }
 
 		    if (typeof storageFiles.background === "undefined"  || forceChange || LS.hasDateExpired(currentDate)) {
-		        var url = "img/" + (Math.floor(Math.random() * 63) + 1) + ".jpg";
+		        //var url = "img/" + (Math.floor(Math.random() * 63) + 1) + ".jpg"; //CHANGED SO IT WILL ALWAYSS BE IMAGE 1
+						var url = "img/" + 1+ ".jpg"; //CHANGED SO IT WILL ALWAYSS BE IMAGE 1
+
 		        storageFiles.background = url;
 		        $scope.updateCache();
 		    }
-		    
+
 		    img.src = storageFiles.background;
 		    ctx.width = img.width;
 		    ctx.height = img.height;
@@ -83,12 +85,12 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 		$scope.setWeather = function() {
 
 		    if (typeof storageFiles.temp === "undefined" || storageFiles.loc != user.location || LS.hasHourExpired(currentHour)) {
-	            
+
 				LS.getWeather(user.location).then(function(response) {
 						var temp = response.data.main.temp;
 						storageFiles.loc = user.location;
-						storageFiles.temp = (user.temperatureType == 0 ? 
-											Math.round(parseInt(temp) - parseInt(KELVIN), 2) + "°C" : 
+						storageFiles.temp = (user.temperatureType == 0 ?
+											Math.round(parseInt(temp) - parseInt(KELVIN), 2) + "°C" :
 											Math.round(((parseInt(temp) - parseInt(KELVIN)) * 9/5) + 32, 2) + "°F");
 						$scope.updateCache();
 						$scope.weatherLoaded();
@@ -98,7 +100,7 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 		    }
 		}
 		$scope.getStateOfDay = function(hours) {
-			if (hours >= 6 && hours < 12) 
+			if (hours >= 6 && hours < 12)
 			{
 				return "time.morning";
 			} else if (hours >= 12 && hours < 14) {
@@ -139,7 +141,7 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 				$scope.setQuote();
 			});
 
-			$interval(function () { 
+			$interval(function () {
 				$scope.setDateAndTime();
 			}, 1000);
 		}
