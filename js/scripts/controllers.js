@@ -68,7 +68,8 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 
 			if (typeof storageFiles.quote === "undefined" || LS.hasDateExpired(currentDate)) {
 				LS.getQuotes().then(function(response) {
-						storageFiles.quote = response.data.quotes[(Math.floor(Math.random() * 270) + 1)];
+						//storageFiles.quote = response.data.quotes[(Math.floor(Math.random() * 270) + 1)]; //CHANGED SO ALWAYS 1
+						storageFiles.quote = response.data.quotes[(1)];
 			            $scope.updateCache();
 			            $scope.quoteLoaded();
 	            });
