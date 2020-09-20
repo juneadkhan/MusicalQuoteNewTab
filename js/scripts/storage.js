@@ -22,7 +22,7 @@ define(['angularAMD'], function (angularAMD) {
 	    },
 	    loadUser: function() {
 	    	var promise = $http.get('user.json');
- 
+
 			promise.then(function(response) {
 				$window.localStorage.setItem(userPath, JSON.stringify(response.data));
 				return response.data;
@@ -47,7 +47,7 @@ define(['angularAMD'], function (angularAMD) {
 	    	promise.then(function(response) {
 	    		return response.data;
 	    	});
-	    	
+
 	    	return promise;
 	    }
 	  };

@@ -58,6 +58,8 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 		    img.src = storageFiles.background;
 		    ctx.width = img.width;
 		    ctx.height = img.height;
+				//storageFiles.quote = response.data.quotes[3];
+
 		}
 
 		$scope.quoteLoaded = function() {
@@ -69,6 +71,10 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 			if (typeof storageFiles.quote === "undefined" || LS.hasDateExpired(currentDate)) {
 				LS.getQuotes().then(function(response) {
 						storageFiles.quote = response.data.quotes[(Math.floor(Math.random() * 270) + 1)];
+						//storageFiles.quote = response.data.quotes[3];
+
+						//storageFiles.quote = "TEST"; //TRYING THIS OUT
+
 			            $scope.updateCache();
 			            $scope.quoteLoaded();
 	            });
@@ -76,6 +82,17 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 				$scope.quoteLoaded();
 			}
 		}
+
+	//
+	// 	//ADDED - TO TEST
+	// 		.controller('QuoteCtrl', ['$scope', '$http', function ($scope, $http) {
+	//   $scope.quotes = [];
+	//   $http
+	//     .get("quotes.json")
+	//     .then(function(response){
+	//       $scope.questions = response.data.quotes;
+	//     });
+	// }])
 
 		$scope.weatherLoaded = function() {
     		$scope.temp = storageFiles.temp;
@@ -125,6 +142,7 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 			$scope.clock = moment().format('HH:mm');
 		}
 
+//STARTUP FUNCTION //MAIN
 		$scope.startup = function() {
 
 			LS.loadUser().then(function(response) {
