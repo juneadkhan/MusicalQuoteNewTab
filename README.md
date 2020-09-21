@@ -1,6 +1,6 @@
 Link to the original repostiory - https://github.com/jakke-korpelainen/newtab-angular
 
-DEMO of this: http://juneadkhan.github.io/
+DEMO of this: https://juneadkhan.github.io/MusicalQuoteNewTab/
 
 DEMO: http://jakke-korpelainen.github.io/newtab-angular/#/
 
