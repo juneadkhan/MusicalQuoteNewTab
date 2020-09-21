@@ -43,7 +43,9 @@ define(['angularAMD'], function (angularAMD) {
 	    },
 	    getWeather : function(location)
 	    {
-	    	var promise = $http.get('http://api.openweathermap.org/data/2.5/weather?q=' + location);
+	    	//var promise = $http.get('http://api.openweathermap.org/data/2.5/weather?q=' + location);
+				var promise = $http.get('api.openweathermap.org/data/2.5/weather?q={'+location+'}&appid={f36e366463c261985623b04441c510f8}');
+
 	    	promise.then(function(response) {
 	    		return response.data;
 	    	});
