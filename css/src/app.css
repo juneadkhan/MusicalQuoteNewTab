@@ -111,6 +111,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .clock {
 	font-weight: 900;
-	margin-bottom: 70px;
+	top: 100%;
+	left: 100%;
 	font-size: 200px;
 }
