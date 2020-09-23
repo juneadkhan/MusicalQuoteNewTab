@@ -63,14 +63,7 @@ h1,h2,h3,h4,h5,h6 {
 #time {
 	text-shadow: 0 0 15px rgba(0,0,0, 0.75);
 	color: white;
-	/* text-align: center;
-	position: fixed;
-	bottom: 0;
-  right: 0;
-	margin-top: -104px;
-	height: auto; */
-
-	right: 1%;
+	right: em;
 	height: auto;
 	position: fixed;
 	bottom: 5%;
