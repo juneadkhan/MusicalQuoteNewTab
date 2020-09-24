@@ -11,46 +11,8 @@
 </div>
 
 <div id="quote">
-	<blockquote>
-		<!-- <h2>answer 2</h2>
-		<p>{{quotes[0].body}}</p>
-		<p>{{quotes[0].source}}</p> -->
-
-		<!-- //TEST -->
-	  <!-- <p>{{"HELLO"}}</p>
-	  <cite>{{"LOL"}}</cite> -->
-
-		<p>{{quote.body}}</p>
-		</blockquote>
-		</div>
-
-
-		<div id="quoteSource">
-		<blockquote>
-		<cite>{{quote.source}}</cite>
-		</blockquote>
-
-		</div>
-
-		<!-- <div id="myData"></div>
-
-		<script>
-		 fetch('quotes.json')
-		     .then(function (response) {
-		         return response.json();
-		     })
-		     .then(function (data) {
-		         appendData(data);
-		     })
-		     .catch(function (err) {
-		         console.log('error: ' + err);
-		     });
-		 function appendData(data) {
-		     var mainContainer = document.getElementById("myData");
-		     for (var i = 0; i < data.length; i++) {
-		         var div = document.createElement("div");
-		         div.innerHTML = 'Name: ' + data[i].body+ ' ' + data[i].source;
-		         mainContainer.appendChild(div);
-		     }
-		 }
-		</script> -->
+	<p>{{quote.body}}</p>
+	<div id="quoteSource">
+		<p>{{quote.source}}</p>
+	</div>
+</div>
