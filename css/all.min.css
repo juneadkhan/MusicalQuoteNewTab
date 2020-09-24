@@ -74,28 +74,26 @@ h1, h2, h3, h4, h5, h6 {
   word-spacing: 0px;
   font-size: 100px;
   font-weight: 900;
-  index: 9999;
+  z-index: 9999;
   font-family: 'Trebuchet MS';
   text-shadow: 0 0 25px rgba(0, 0, 0, 0.95);
   color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0%;
+  position: fixed;
+  top: 5px;
+  left: 30px;
   width: 60%;
   height: auto
 }
 
 #quoteSource {
 	z-index: 9999;
+	line-height: 10px;
 	font-family: "Trebuchet MS",sans-serif;
 	font-weight: bold;
 	font-size: 30px;
 	text-shadow: 0 0 15px rgba(0,0,0, 0.95);
 	color: white;
 	position: absolute;
-	top: 40%;
-	left: 0%;
-	height: auto;
 }
 
 #links {
