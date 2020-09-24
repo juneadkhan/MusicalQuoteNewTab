@@ -78,9 +78,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Trebuchet MS';
   text-shadow: 0 0 25px rgba(0, 0, 0, 0.95);
   color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0%;
+  position: relative;
+  top: -500px;
+  left: 20px;
   width: 60%;
   height: auto
 }
@@ -93,8 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-shadow: 0 0 15px rgba(0,0,0, 0.95);
 	color: white;
 	position: absolute;
-	top: 40%;
-	left: 0%;
+	top: 80%;
 	height: auto;
 }
 
