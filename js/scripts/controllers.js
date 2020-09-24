@@ -3,8 +3,6 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 	controllers.controller('DashboardCtrl', function ($scope, $interval, $http, LS, locale) {
 
 	    var KELVIN = 273.15;
-			var CURRENT = 1;
-
 
 		// define variables
     	var user,
@@ -51,18 +49,10 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 
 		    if (typeof storageFiles.background === "undefined"  || forceChange || LS.hasDateExpired(currentDate)) {
 		        //var url = "img/" + (Math.floor(Math.random() * 63) + 1) + ".jpg"; //CHANGED SO IT WILL ALWAYSS BE IMAGE 1
-						var url = "img/" + parseInt(CURRENT)) + ".jpg"; //CHANGED SO IT WILL ALWAYSS BE IMAGE 1
-
-						$scope.quote = storageFiles.quote;
-						storageFiles.quote = response.data.quotes[parseInt(CURRENT)];
-
-						CURRENT =  Math.floor((Math.random() * 270));
-
+						var url = "img/" + 1+ ".jpg"; //CHANGED SO IT WILL ALWAYSS BE IMAGE 1
 
 		        storageFiles.background = url;
 		        $scope.updateCache();
-						$scope.quoteLoaded();
-
 		    }
 
 		    img.src = storageFiles.background;
@@ -80,10 +70,7 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 
 			if (typeof storageFiles.quote === "undefined" || LS.hasDateExpired(currentDate)) {
 				LS.getQuotes().then(function(response) {
-						// storageFiles.quote = response.data.quotes[(Ù) + 1)];
-						storageFiles.quote = response.data.quotes[parseInt(CURRENT)];
-
-
+						storageFiles.quote = response.data.quotes[(Math.floor(Math.random() * 270) + 1)];
 						//storageFiles.quote = response.data.quotes[3];
 
 						//storageFiles.quote = "TEST"; //TRYING THIS OUT
