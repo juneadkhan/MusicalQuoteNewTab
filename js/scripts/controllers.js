@@ -3,7 +3,7 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 	controllers.controller('DashboardCtrl', function ($scope, $interval, $http, LS, locale) {
 
 	    var KELVIN = 273.15;
-		var randomInteger = Math.floor(Math.random() * 3) + 1; // random integer between 1 and 4
+		var randomInteger = Math.floor(Math.random() * 4) + 1; // random integer between 1 and 4
 
 		// define variables
     	var user,
@@ -83,7 +83,7 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 		
 		$scope.setBackgroundAndQuote = function (forceChange) {
 			var temp = randomInteger;
-			randomInteger = Math.floor(Math.random() * 2) + 1; // random integer between 1 and 3
+			randomInteger = Math.floor(Math.random() * 3) + 1; // random integer between 1 and 3
 			if (randomInteger >= temp) randomInteger++;
 			$scope.setBackground(forceChange);
 			$scope.setQuote(forceChange);
