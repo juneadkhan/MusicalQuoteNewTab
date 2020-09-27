@@ -63,9 +63,9 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 			$scope.quote = storageFiles.quote;
 		}
 
-		$scope.setQuote = function() {
+		$scope.setQuote = function(forceChange) {
 
-			if (typeof storageFiles.quote === "undefined" || LS.hasDateExpired(currentDate)) {
+			if (typeof storageFiles.quote === "undefined" || forceChange || LS.hasDateExpired(currentDate)) {
 				LS.getQuotes().then(function(response) {
 						storageFiles.quote = response.data.quotes[parseInt(randomInteger - 1)];
 			            $scope.updateCache();
@@ -79,6 +79,12 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 		$scope.weatherLoaded = function() {
     		$scope.temp = storageFiles.temp;
 			$scope.loc = storageFiles.loc;
+		}
+		
+		$scope.setBackgroundAndQuote = function (forceChange) {
+			randomInteger = Math.floor(Math.random() * 3) + 1; // random integer between 1 and 4
+			$scope.setBackground(forceChange);
+			$scope.setQuote(forceChange);
 		}
 
 		$scope.setWeather = function() {
