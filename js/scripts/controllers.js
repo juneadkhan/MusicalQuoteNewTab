@@ -3,7 +3,7 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 	controllers.controller('DashboardCtrl', function ($scope, $interval, $http, LS, locale) {
 
 	    var KELVIN = 273.15;
-		var randomInteger = Math.floor(Math.random() * 3) + 1; // random integer between 1 and 4
+		var randomInteger = Math.floor(Math.random() * 4) + 1; // random integer between 1 and 4
 
 		// define variables
     	var user,
@@ -63,9 +63,9 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 			$scope.quote = storageFiles.quote;
 		}
 
-		$scope.setQuote = function() {
+		$scope.setQuote = function(forceChange) {
 
-			if (typeof storageFiles.quote === "undefined" || LS.hasDateExpired(currentDate)) {
+			if (typeof storageFiles.quote === "undefined" || forceChange || LS.hasDateExpired(currentDate)) {
 				LS.getQuotes().then(function(response) {
 						storageFiles.quote = response.data.quotes[parseInt(randomInteger - 1)];
 			            $scope.updateCache();
@@ -79,6 +79,14 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 		$scope.weatherLoaded = function() {
     		$scope.temp = storageFiles.temp;
 			$scope.loc = storageFiles.loc;
+		}
+		
+		$scope.setBackgroundAndQuote = function (forceChange) {
+			var temp = randomInteger;
+			randomInteger = Math.floor(Math.random() * 3) + 1; // random integer between 1 and 3
+			if (randomInteger >= temp) randomInteger++;
+			$scope.setBackground(forceChange);
+			$scope.setQuote(forceChange);
 		}
 
 		$scope.setWeather = function() {
