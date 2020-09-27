@@ -82,7 +82,9 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 		}
 		
 		$scope.setBackgroundAndQuote = function (forceChange) {
-			randomInteger = Math.floor(Math.random() * 3) + 1; // random integer between 1 and 4
+			var temp = randomInteger;
+			randomInteger = Math.floor(Math.random() * 2) + 1; // random integer between 1 and 3
+			if (randomInteger >= temp) randomInteger++;
 			$scope.setBackground(forceChange);
 			$scope.setQuote(forceChange);
 		}
