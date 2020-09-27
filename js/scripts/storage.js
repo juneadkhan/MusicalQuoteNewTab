@@ -42,17 +42,15 @@ define(['angularAMD'], function (angularAMD) {
 	    	return promise;
 	    },
 
-				$(document).ready(function(){
 	var lat, lng;
-	navigator.geolocation.getCurrentPosition(handle_geolocation_query,handle_errors);
 	function handle_geolocation_query(position){
 	    lat = position.coords.latitude;
 	    lng =  position.coords.longitude;
 	}
-	});
 
 	    getWeather : function(location)
 	    {
+				navigator.geolocation.getCurrentPosition(handle_geolocation_query);
 
 	    	//var promise = $http.get('http://api.openweathermap.org/data/2.5/weather?q=' + location);
 				// var promise = $http.get('https://api.openweathermap.org/data/2.5/weather?q='+location+'&appid=f36e366463c261985623b04441c510f8');
