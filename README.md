@@ -1,8 +1,4 @@
-Link to the original repostiory - https://github.com/jakke-korpelainen/newtab-angular
-
 DEMO of this: https://juneadkhan.github.io/MusicalQuoteNewTab/
-
-DEMO: http://jakke-korpelainen.github.io/newtab-angular/#/
 
 #Briefly
 Developed for personal use after changing from chrome to firefox.
@@ -38,3 +34,6 @@ There is no setup so feel free to tweak around to make it suitable for your need
 #Screenshots
 ![1](http://i.imgur.com/BvVhERO.jpg "Screenshot 1")
 ![2](http://i.imgur.com/fqLBsDq.jpg "Screenshot 2")
+
+Inspired by - https://github.com/jakke-korpelainen/newtab-angular
+
