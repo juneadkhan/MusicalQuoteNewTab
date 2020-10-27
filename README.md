@@ -1,4 +1,4 @@
-DEMO of this: https://juneadkhan.github.io/MusicalQuoteNewTab/
+DEMO: https://juneadkhan.github.io/MusicalQuoteNewTab/
 
 #Briefly
 Developed for personal use after changing from chrome to firefox.
@@ -32,8 +32,6 @@ Daily changing background, quote and a forecast from [OpenWeatherMap](http://ope
 There is no setup so feel free to tweak around to make it suitable for your needs. The "app" is powered by [AngularJs](https://angularjs.org/), [RequireJs](http://requirejs.org/) and [moment.js](http://momentjs.com/) (datetime localization). If you get tired of a background you can double click it to get a new one.
 
 #Screenshots
-![1](http://i.imgur.com/BvVhERO.jpg "Screenshot 1")
-![2](http://i.imgur.com/fqLBsDq.jpg "Screenshot 2")
 
 Inspired by - https://github.com/jakke-korpelainen/newtab-angular
 
