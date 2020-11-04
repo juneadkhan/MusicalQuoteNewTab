@@ -1,6 +1,5 @@
 DEMO: https://juneadkhan.github.io/MusicalQuoteNewTab/
 
-#Briefly
 Developed for personal use after changing from chrome to firefox.
 Inspired by Momentum addon for Google Chrome.
 
@@ -8,7 +7,7 @@ Images and quotes loaned from the Momentum-addon for Chrome in addition with a f
 At the time being this works by referencing the site from filesystem or you may host this into a local/external httpserver. I recommend to use this with Custom New Tab -addin that supports preloading the app, placing focus into URL bar and making it empty.
 https://addons.mozilla.org/en/firefox/addon/custom-new-tab/
 
-#Customization
+# Customization
 Basic level customization is available by modifying the user.json;
 ```javascript
 {
@@ -27,11 +26,11 @@ Basic level customization is available by modifying the user.json;
    * 1 : Fahrenheit
 * dateformat, see [moment.js docs](http://momentjs.com/docs/#/displaying/) for help
 
-#Features/Tech
+# Features/Tech
 Daily changing background, quote and a forecast from [OpenWeatherMap](http://openweathermap.org/api), data is cached to html5 localStorage and expires daily/hourly (forecast).
 There is no setup so feel free to tweak around to make it suitable for your needs. The "app" is powered by [AngularJs](https://angularjs.org/), [RequireJs](http://requirejs.org/) and [moment.js](http://momentjs.com/) (datetime localization). If you get tired of a background you can double click it to get a new one.
 
-#Screenshots
+# Screenshots
 
 Inspired by - https://github.com/jakke-korpelainen/newtab-angular
 
