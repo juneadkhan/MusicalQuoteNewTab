@@ -1,6 +1,5 @@
 DEMO: https://juneadkhan.github.io/MusicalQuoteNewTab/
 
-Developed for personal use after changing from chrome to firefox.
 Inspired by Momentum addon for Google Chrome.
 
 Images and quotes loaned from the Momentum-addon for Chrome in addition with a few images I've handpicked from various open licence stock photo providers.
