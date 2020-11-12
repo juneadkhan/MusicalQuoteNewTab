@@ -16,6 +16,7 @@ Basic level customization is available by modifying the user.json;
 	"dateformat" : "dddd DD.MM.YYYY"
 }
 ```
+
 * locale is for localizing the datetime.
 * name which to greet
 * location is the name of the city you want forecast
@@ -26,7 +27,7 @@ Basic level customization is available by modifying the user.json;
 
 # Features/Tech
 Daily changing background, quote and a forecast from [OpenWeatherMap](http://openweathermap.org/api), data is cached to html5 localStorage and expires daily/hourly (forecast).
-There is no setup so feel free to tweak around to make it suitable for your needs. The "app" is powered by [AngularJs](https://angularjs.org/), [RequireJs](http://requirejs.org/) and [moment.js](http://momentjs.com/) (datetime localization). If you get tired of a background you can double click it to get a new one.
+The "app" is powered by [AngularJs](https://angularjs.org/), [RequireJs](http://requirejs.org/) and [moment.js](http://momentjs.com/) (datetime localization). If you get tired of a background you can double click it to get a new one.
 
 # Screenshots
 
