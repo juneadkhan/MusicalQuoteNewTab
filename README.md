@@ -13,6 +13,10 @@ This is a **Webpage** that displays an inspirational quote from an artist's musi
 
 # Screenshots
 
+![Demo1](DemoImage1.png)
+![Demo2](DemoImage2.png)
+
+
 
 
 # Customization
